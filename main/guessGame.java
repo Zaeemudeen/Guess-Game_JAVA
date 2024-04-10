@@ -61,16 +61,18 @@ class guessGame {
         int choice;
 
         System.out.println();
-        System.out.println("TO END GAME : PRESS 1");
-        System.out.println("TO PLAY AGAIN : PRESS 2");
+        System.out.println("TO PLAY AGAIN : PRESS 1");
+        System.out.println("TO END GAME : PRESS 2");
         choice = k.nextInt();
         System.out.println();
 
-        if (choice != 2) {
-            System.exit(0);
-        } else {
-            Start();
-        }
+        switch(choice) {
+		case 1:
+			Start();
+			break;
+		default:
+			System.exit(0);
+	}
 
         k.close();
     }
